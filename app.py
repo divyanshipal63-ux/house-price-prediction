@@ -26,7 +26,7 @@ for i in final_X:
   result = st.sidebar.slider(f'Select {i} value',min_value,max_value)
   all_value.append(result)
 
-user_X=scalar.transform([all_value])
+user_X=scaler.transform([all_value])
 @st.cache_data
 def ml_model(X,y):
   model=RandomForestRegressor()
@@ -46,6 +46,7 @@ st.markdown('''**Design and Developed by:Divyanshi Pal**''')
 
 
   
+
 
 
 
